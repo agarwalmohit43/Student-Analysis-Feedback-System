@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add question</title>
+
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="addcss.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/mui.css" type="text/css" />
+    <link href="css/mui.min.css" type="text/css" />
+<script src="js/jquery.min.js"> </script>
+<!-- Mainly scripts -->
+<script src="js/jquery.metisMenu.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<!-- Custom and plugin javascript -->
+<link href="css/custom.css" rel="stylesheet">
+<script src="js/custom.js"></script>
+<script src="js/screenfull.js"></script>
+<script src="js/mui.js"></script>
+    <script src="js/mui.min.js"><</script>
+<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+
+			
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});
+			
+
+			
+		});
+		</script>
+<link rel="stylesheet" href="css/material.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+</head>
+
+<body>
+<div id="wrapper">
+
+
+        <nav class="navbar-default navbar-static-top" role="navigation">
+             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <h1> <a class="navbar-brand" href="../sample/index.html">SAFS</a></h1>         
+			   </div>
+			 <div class=" border-bottom">
+        	<div class="full-left">
+        	  <section class="full-top">
+				<button id="toggle"><i class="fa fa-arrows-alt"></i></button>	
+			</section>
+			
+            <div class="clearfix"> </div>
+           </div>
+            <div class="drop-men"></div><!-- /.navbar-collapse -->
+			<div class="clearfix">
+       
+     </div>
+	  
+		    <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+				<p>&nbsp;  </p>
+                <p>&nbsp;  </p>
+                <p>&nbsp;  </p>
+                <p>&nbsp;  </p>
+                <p>&nbsp;  </p>
+                <p>&nbsp;  </p>
+                    <li>
+                        <a href="dashboard.html" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboards</span> </a>
+                    </li>
+                   
+                    <li>
+                        <a href="addques.html" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Add Question</span><span class="fa arrow"></span></a>
+                        
+                    </li>
+					 <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Make Question Paper</span><span class="fa arrow"></span></a>
+                        
+                    </li>
+                    
+                   
+                     <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Qs. Paper Analysis</span><span class="fa arrow"></span></a>
+                 </li>       
+                </ul>
+            </div>
+			</div>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+       <div class="content-main">
+ 
+  		<!--banner-->	
+		    <div class="banner">
+            <h2>
+				<a href="index.html">Home</a>
+				<i class="fa fa-angle-right"></i>
+				<span>Add Question</span>
+				</h2>
+		    </div>
+		<!--//banner-->
+        <p>&nbsp;</p>
+           <p>&nbsp;</p>
+       
+       <center> 
+       <form id="addquestion">
+       
+          <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-12" >
+                  <label for="qbox"></label>
+                  <input class="form-control" type="text" id="ques" placeholder="Add Your Text Here" style="height:100px;width:400px">
+              </div>
+ 
+          </div>
+           <div class="row" style="margin-top:50px;">
+               <div class="col-xs-2" id="class">
+                  <select name="Class" id="classes" class="dropdown">
+                        <option value="" selected >Select Class</option>
+                  </select>
+
+           </div>
+            <div class="col-xs-2" id="Subject">
+                   <select name="level" id="subjects" >
+                            <option value="" selected >Select Subject</option>
+                   </select>
+
+             </div>
+  <div class="col-xs-2" id="Chapter">
+      <select name="level" id="chapters">
+            <option value="" selected >Select Chapter</option>
+          </select>
+ 
+ </div>
+  <div class="col-xs-2" id="Category">
+      <select name="level" id="categories">
+            <option value="" selected >Select Category</option>
+          </select>
+ 
+ </div>
+ 
+ <div class="col-xs-2" id="qtypeq">
+      <select name="level" id="qtype" >
+            <option value="" selected >Question Type</option>
+           <option value="Long">Long</option>
+          <option value="Short">Short</option>
+          <option value="Small">Small</option>
+          </select>
+ 
+ </div>
+  <div class="col-xs-2" id="level">
+      <select name="level" id="qlevel" >
+          <option value="" selected >Select level</option>
+          <option value="Hard">Hard</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+          </select>
+ 
+ </div>
+  
+ 
+ </div>
+ 
+           </div>
+           <div class="row" style="margin-top:50px">
+           <button type="submit">Submit</button>
+           </div>
+           </form>
+           </center>
+        
+           
+           <script src="js/jquery.nicescroll.js"></script>
+	<script src="js/scripts.js"></script>
+	<!--//scrolling js-->
+	<script src="js/bootstrap.min.js"> </script>
+    </div>
+         </div>
+   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+ <script type="text/javascript">
+
+     $(document).ready(function (e) {
+
+         var data={action:"class"}
+         $.ajax({
+             type:"POST",
+             url:"php/addquestion.php",
+             data:data,
+             success: function(data){
+                 if(data){
+                     data = JSON.parse(data);
+                     data.forEach(function(data,index){
+                         $('#classes').append("<option value="+data.class_id+">"+data.class+"</option>")
+
+                     });
+                 }
+             }
+         });
+
+     });
+
+     $('#classes').change(function (e) {
+         var data={
+             action:"subjects",
+             class:$('#classes').val()
+         }
+         $('#subjects option').remove();
+
+         $.ajax({
+             type: "POST",
+             url:"php/addquestion.php",
+             data:data,
+             success: function(data){
+                 if(data){
+                     $('#subjects').append("<option value='' selected>Select Subject</option>");
+
+                     data = JSON.parse(data);
+                     data.forEach(function(data,index){
+                         $('#subjects').append("<option value="+data.sub_id+">"+data.subject+"</option>")
+
+                     });
+                 }
+             }
+         });
+
+     });
+
+     $('#subjects').change(function (e) {
+         var data={
+             action:"categories",
+             subject:$('#subjects').val()
+         }
+         $('#categories option').remove();
+         $.ajax({
+             type: "POST",
+             url:"php/addquestion.php",
+             data:data,
+             success: function(data){
+                 if(data){
+                     $('#categories').append("<option value='' selected>Select Category</option>");
+
+                     data = JSON.parse(data);
+                     data.forEach(function(data,index){
+                         $('#categories').append("<option value="+data.category_id+">"+data.category+"</option>")
+
+                     });
+                 }
+             }
+         });
+
+     });
+
+     $('#subjects').change(function (e) {
+         var data={
+             action:"chapters",
+             subject:$('#subjects').val()
+         }
+         $('#chapters option').remove();
+         $.ajax({
+             type: "POST",
+             url:"php/addquestion.php",
+             data:data,
+             success: function(data){
+                 if(data){
+                     $('#chapters').append("<option value='' selected>Select Chapter</option>");
+
+                     data = JSON.parse(data);
+                     data.forEach(function(data,index){
+                         $('#chapters').append("<option value="+data.chapter_id+">"+data.chapter+"</option>")
+
+                     });
+                 }
+             }
+         });
+
+     });
+
+     $(document).ready(function(e) {
+         $('#addquestion').on('submit',addquestion);
+     });
+
+     function addquestion(e) {
+         e.preventDefault();
+         var data=
+         {
+             action:"question",
+             question:$('#ques').val(),
+             qtype:$('#qtype').val(),
+             category:$('#categories').val(),
+             chapter:$('#chapters').val(),
+             qlevel:$('#qlevel').val()
+         }
+         $.ajax({
+             type: "POST",
+             url:"php/addquestion.php",
+             data:data,
+             success: function(data){
+
+                 alert(data);
+             }
+         });
+
+     }
+ </script>
+</body>
+</html>
